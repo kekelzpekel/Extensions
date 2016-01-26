@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Score hider",
+  "description": "This extension hides sport results from website www.sport.cz",
+  "version": "0.1",
+  "content_scripts": [
+    { "matches": ["http://*/*"], "js": ["content.js"] }
+  ],
+  "browser_action": {
+    "default_icon": "marker.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
